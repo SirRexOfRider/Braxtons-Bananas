@@ -12,8 +12,9 @@ def get_input():
 
 #TODO:Print cost
 def display( ):
-    bananas = bungaloo.bananas
-    price = bungaloo.price
+    bananas = bungaloo.get_number_of_bananas()
+    price = bungaloo.get_price()
+    
     print(f"Number of bananas: {bananas}")
     print(f"Price of bananas: ${price:,.2f}")
 
