@@ -1,0 +1,32 @@
+
+
+
+#Import class
+import braxtons_bananas_class
+
+
+#TODO:Get int input from user
+def get_input():  
+    bananas = int(input("How many bananas?: "))   
+    return bananas
+
+#TODO:Print cost
+def display( ):
+    bananas = bungaloo.bananas
+    price = bungaloo.price
+    print(f"Number of bananas: {bananas}")
+    print(f"Price of bananas: ${price:,.2f}")
+
+#Get input
+bananas = get_input()
+
+#Create object
+bungaloo = braxtons_bananas_class.BananaBungaloo()
+
+#Calc
+bungaloo.calc(bananas)
+
+#Display
+display()
+
+  
