@@ -10,10 +10,10 @@ Purpose: Agile development/POS
 POB = 10.50
 
 #Make class
-class BananaBungaloo:
+class BananaBungaloo: 
     def __init__(self):
-        self.menu_items = ["Banana Bread $", "Banana smoothie $", "Banana $"]
-        self.menu_price = [5.00,3.50,10]
+        self.menu_items = ["Banana Bread $", "Banana smoothie $", "Banana $", "Gormet Banana Sauce $"]
+        self.menu_price = [5.00,3.50,10,10]
 
         self.cart = []
 
@@ -25,8 +25,10 @@ class BananaBungaloo:
     
     def display_menu(self) -> str:
         """Display menu items and prices"""
-        for n in range(3):
-            print(f"{self.menu_items[n]}{self.menu_price[n]}")
+        display = ""
+        for n in range(len(self.menu_items)):
+            display += f"{self.menu_items[n]}{self.menu_price[n]}\n"
+        return display
 
     #TODO:Get int input from user
     def get_input(self):  
@@ -43,6 +45,13 @@ class BananaBungaloo:
 #Create object
 bungaloo = BananaBungaloo()
 
-bungaloo.get_menu_items()
-bungaloo.get_menu_prices()
-bungaloo.display_menu()
+#Assign to variables for multiple interfaces
+
+bananas = bungaloo.bananas
+
+menu_items = bungaloo.get_menu_items()
+menu_prices = bungaloo.get_menu_prices()
+display_menu = bungaloo.display_menu()
+
+print(display_menu)
+
