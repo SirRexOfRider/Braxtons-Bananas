@@ -11,11 +11,13 @@ POB = 10.50
 
 #Make class
 class BananaBungaloo: 
+    
     def __init__(self):
+        #Initialize parallel lists for menu items and prices
         self.menu_items = ["Banana Bread $", "Banana smoothie $", "Banana $", "Gormet Banana Sauce $"]
         self.menu_price = [5.00,3.50,10,10]
-
-        self.cart = []
+        #Initialize a parallel cart to store the current quantity
+        self.cart = [0,0,0,0]
 
     def get_menu_items(self) -> list:
         return self.menu_items
@@ -30,24 +32,13 @@ class BananaBungaloo:
             display += f"{self.menu_items[n]}{self.menu_price[n]}\n"
         return display
 
-    #TODO:Get int input from user
-    def get_input(self):  
-        self.bananas = int(input("How many bananas?: "))   
-
-    #TODO:Calculate price
-    def calc(self):   
-        self.price = POB * self.bananas
-        
-    #TODO:Print cost
-    def display(self):
-        print(f"Price of bananas: ${self.price:,.2f}")
 
 #Create object
 bungaloo = BananaBungaloo()
 
 #Assign to variables for multiple interfaces
 
-bananas = bungaloo.bananas
+
 
 menu_items = bungaloo.get_menu_items()
 menu_prices = bungaloo.get_menu_prices()
